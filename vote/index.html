@@ -6,16 +6,25 @@
     <script src="/vote.js"></script>
   </head>
   <body>
+    <select id="voting" name="1">
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JS">JS</option>
+    </select>
+    <button onclick="v()">Vote</button>
     <script>
       var local = JavaKilg.local;
       function check_voting(option, episode) {
         if(local.get("voted_"+episode)!="yes") {
           local.set("voted_"+episode, "yes");
           vote(option);
+          alert("Thank you for voting!")
         }
         else{
           alert("You already voted!");
         }
+      }
+      function v() {
       }
     </script>
   </body>
