@@ -4,6 +4,7 @@ function vote(option) {
 		form.append("vote", option);
 		fetch("https://chat.kilgorezer.com/vote/vote.php", {
 			method: "POST",
+			mode: 'no-cors',
 			body: form
 		})
 	}
